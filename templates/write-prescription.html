@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Write Prescription</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            background-color: #90e0ef;
+            color: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+        .container:hover {
+            transform: translateY(-10px);
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .btn {
+            margin-right: 10px;
+        }
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container my-4">
+        <h2 class="text-center my-4">Write Prescription</h2>
+        <form id="prescription-form" action="/write-prescription/{{ appointment.id }}" method="POST">
+            <input type="hidden" id="pdf_path" name="pdf_path">
+            <div class="form-group">
+                <label for="patient_name">Patient Name</label>
+                <input type="text" class="form-control" id="patient_name" name="patient_name" value="{{ patient.name }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="patient_email">Patient Email</label>
+                <input type="email" class="form-control" id="patient_email" name="patient_email" value="{{ patient.email }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="patient_phone">Patient Phone</label>
+                <input type="text" class="form-control" id="patient_phone" name="patient_phone" value="{{ patient.phone }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="patient_gender">Gender</label>
+                <input type="text" class="form-control" id="patient_gender" name="patient_gender" value="{{ patient.gender }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="patient_blood">Blood Group</label>
+                <input type="text" class="form-control" id="patient_blood" name="patient_blood" value="{{ appointment.Select_Blood }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="patient_age">Patient Age</label>
+                <input type="number" class="form-control" id="patient_age" name="patient_age">
+            </div>
+            <div class="form-group">
+                <label for="disease_name">Disease Name</label>
+                <input type="text" class="form-control" id="disease_name" name="disease_name">
+            </div>
+            <div class="form-group">
+                <label for="medication_name">Medication Name</label>
+                <input type="text" class="form-control" id="medication_name" name="medication_name">
+            </div>
+            <div class="form-group">
+                <label for="dosage">Dosage</label>
+                <input type="text" class="form-control" id="dosage" name="dosage">
+            </div>
+            <div class="form-group">
+                <label for="frequency">Frequency</label>
+                <input type="text" class="form-control" id="frequency" name="frequency">
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration</label>
+                <input type="text" class="form-control" id="duration" name="duration">
+            </div>
+            <!-- Add these fields for full prescription data -->
+            <div class="form-group">
+                <label for="date_signed">Date Signed</label>
+                <input type="date" class="form-control" id="date_signed" name="date_signed" value="{{ current_date or '' }}">
+            </div>
+            <div class="form-group">
+                <label for="doctor_signature">Doctor Signature</label>
+                <input type="text" class="form-control" id="doctor_signature" name="doctor_signature" value="{{ doctor.full_name if doctor else '' }}">
+            </div>
+            <div class="form-group">
+                <label for="prescription_text">Prescription Text</label>
+                <textarea class="form-control" id="prescription_text" name="prescription_text" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Prescription</button>
+            <button type="button" id="sendButton" class="btn btn-secondary" disabled>Send Prescription</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="/static/js/prescription.js"></script>
+  </body>
+</html>

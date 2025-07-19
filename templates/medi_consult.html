@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medi Consult</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .logo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 15px;
+            transition: transform 0.5s ease;
+        }
+        .logo img:hover {
+            transform: rotate(360deg);
+        }
+        .navbar {
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #00b4d8 !important;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            color: #0077b6;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #00b4d8 !important;
+        }
+        h2 {
+            color: #023e8a;
+            font-weight: 800;
+            margin-top: 40px;
+            animation: fadeInDown 1.5s ease;
+        }
+        .container {
+            background-color: #90e0ef;
+            color: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+        .container:hover {
+            transform: translateY(-10px);
+        }
+        .table {
+            background-color: white;
+            color: #333;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .table th {
+            background-color: #0077b6;
+            color: white;
+        }
+        .table tbody tr:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+        .table tbody tr:nth-child(even) {
+            background-color: #e0e0e0;
+        }
+        .table tbody tr:hover {
+            background-color: #d0d0d0;
+        }
+        .symptoms-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .symptoms-list li {
+            background-color: #0077b6;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .symptoms-list li:hover {
+            background-color: #023e8a;
+        }
+        footer {
+            background-color: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        p.intro {
+            font-size: 1.25rem; /* Increase the font size */
+            font-weight: bold;  /* Make the text bold */
+            color: #ff6347;     /* Change the color to a different one */
+        }
+        h3.availability {
+            color: #00b4d8;     /* Change the color */
+            font-weight: bold;  /* Make the text bold */
+        }
+        h4.symptoms {
+            color: #0077b6;     /* Change the color */
+            font-weight: bold;  /* Make the text bold */
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Logo at the top-left corner -->
+            <div class="logo">
+                <img src="{{ url_for('static', filename='H.jpg') }}" alt="Image">
+            </div>
+            <a class="navbar-brand" href="#">Health Care</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/developer">Developer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/medi_consult">Medi Consult</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/appointment">Appointment Book</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4 mt-4">
+        <h2 class="text-center">Medi Consult</h2>
+        <p class="intro">Welcome to Medi Consult, your go-to platform for health consultations and information.</p>
+
+        <h3 class="availability">Doctor Availability</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Doctor</th>
+                    <th>Specialization</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Dr. John Doe, MBBS</td>
+                    <td>Consultant Cardiologist : Specialist in heart diseases and conditions.</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Dr. Jane Smith, MD</td>
+                    <td>Consultant Neurologist : Specialist in brain and nervous system disorders.</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Dr. Michael Brown, MS</td>
+                    <td>Consultant Oncologist : Specialist in cancer treatment.</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Dr. Emily White, DM</td>
+                    <td>Consultant Dermatologist : Specialist in skin diseases and conditions.</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Dr. William Green, MBBS, MS</td>
+                    <td>Consultant Orthopedic Surgeon : Specialist in bone, joint, and muscle surgery.</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Dr. Sarah Johnson, MBBS</td>
+                    <td>Consultant Pediatrician : Specialist in children's health and development.</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>No doctor available</td>
+                    <td>No specialization available</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mt-5">
+            <h4 class="symptoms">Predefined Symptoms</h4>
+            <ul class="symptoms-list">
+                <li>itching</li>
+                <li>skin_rash</li>
+                <li>nodal_skin_eruptions</li>
+                <li>continuous_sneezing</li>
+                <li>shivering</li>
+                <li>chills</li>
+                <li>joint_pain</li>
+                <li>stomach_pain</li>
+                <li>acidity</li>
+                <li>ulcers_on_tongue</li>
+                <li>muscle_wasting</li>
+                <li>vomiting</li>
+                <li>burning_micturition</li>
+                <li>spotting_urination</li>
+                <li>fatigue</li>
+                <li>weight_gain</li>
+                <li>anxiety</li>
+                <li>cold_hands_and_feets</li>
+                <li>mood_swings</li>
+                <li>weight_loss</li>
+                <li>restlessness</li>
+                <li>lethargy</li>
+                <li>patches_in_throat</li>
+                <li>irregular_sugar_level</li>
+                <li>cough</li>
+                <li>high_fever</li>
+                <li>sunken_eyes</li>
+                <li>breathlessness</li>
+                <li>sweating</li>
+                <li>dehydration</li>
+                <li>indigestion</li>
+                <li>headache</li>
+                <li>yellowish_skin</li>
+                <li>dark_urine</li>
+                <li>nausea</li>
+                <li>loss_of_appetite</li>
+                <li>pain_behind_the_eyes</li>
+                <li>back_pain</li>
+                <li>constipation</li>
+                <li>abdominal_pain</li>
+                <li>diarrhoea</li>
+                <li>mild_fever</li>
+                <li>yellow_urine</li>
+                <li>yellowing_of_eyes</li>
+                <li>acute_liver_failure</li>
+                <li>fluid_overload</li>
+                <li>swelling_of_stomach</li>
+                <li>swelled_lymph_nodes</li>
+                <li>malaise</li>
+                <li>blurred_and_distorted_vision</li>
+                <li>phlegm</li>
+                <li>throat_irritation</li>
+                <li>redness_of_eyes</li>
+                <li>sinus_pressure</li>
+                <li>runny_nose</li>
+                <li>congestion</li>
+                <li>chest_pain</li>
+                <li>weakness_in_limbs</li>
+                <li>fast_heart_rate</li>
+                <li>pain_during_bowel_movements</li>
+                <li>pain_in_anal_region</li>
+                <li>bloody_stool</li>
+                <li>irritation_in_anus</li>
+                <li>neck_pain</li>
+                <li>dizziness</li>
+                <li>cramps</li>
+                <li>bruising</li>
+                <li>obesity</li>
+                <li>swollen_legs</li>
+                <li>swollen_blood_vessels</li>
+                <li>puffy_face_and_eyes</li>
+                <li>enlarged_thyroid</li>
+                <li>brittle_nails</li>
+                <li>swollen_extremeties</li>
+                <li>excessive_hunger</li>
+                <li>extra_marital_contacts</li>
+                <li>drying_and_tingling_lips</li>
+                <li>slurred_speech</li>
+                <li>knee_pain</li>
+                <li>hip_joint_pain</li>
+                <li>muscle_weakness</li>
+                <li>stiff_neck</li>
+                <li>swelling_joints</li>
+                <li>movement_stiffness</li>
+                <li>spinning_movements</li>
+                <li>loss_of_balance</li>
+                <li>unsteadiness</li>
+                <li>weakness_of_one_body_side</li>
+                <li>loss_of_smell</li>
+                <li>bladder_discomfort</li>
+                <li>foul_smell_of_urine</li>
+                <li>continuous_feel_of_urine</li>
+                <li>passage_of_gases</li>
+                <li>internal_itching</li>
+                <li>toxic_look_(typhos)</li>
+                <li>depression</li>
+                <li>irritability</li>
+                <li>muscle_pain</li>
+                <li>altered_sensorium</li>
+                <li>red_spots_over_body</li>
+                <li>belly_pain</li>
+                <li>abnormal_menstruation</li>
+                <li>dischromic_patches</li>
+                <li>watering_from_eyes</li>
+                <li>increased_appetite</li>
+                <li>polyuria</li>
+                <li>family_history</li>
+                <li>mucoid_sputum</li>
+                <li>rusty_sputum</li>
+                <li>lack_of_concentration</li>
+                <li>visual_disturbances</li>
+                <li>receiving_blood_transfusion</li>
+                <li>receiving_unsterile_injections</li>
+                <li>coma</li>
+                <li>stomach_bleeding</li>
+                <li>distention_of_abdomen</li>
+                <li>history_of_alcohol_consumption</li>
+                <li>fluid_overload.1</li>
+                <li>blood_in_sputum</li>
+                <li>prominent_veins_on_calf</li>
+                <li>palpitations</li>
+                <li>painful_walking</li>
+                <li>pus_filled_pimples</li>
+                <li>blackheads</li>
+                <li>scurring</li>
+                <li>skin_peeling</li>
+                <li>silver_like_dusting</li>
+                <li>small_dents_in_nails</li>
+                <li>inflammatory_nails</li>
+                <li>blister</li>
+                <li>red_sore_around_nose</li>
+                <li>yellow_crust_ooze</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Riju Mandal (Vibes_of_Riju). All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

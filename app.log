@@ -1,0 +1,254 @@
+2025-03-09 01:15:27,861 - __main__ - INFO - Index page loaded
+2025-03-09 01:18:43,866 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:18:45,245 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:18:52,692 - __main__ - INFO - Index page loaded
+2025-03-09 01:18:56,149 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 01:18:58,745 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:18:59,584 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:19:00,421 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:19:00,885 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:19:01,166 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:19:01,412 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:19:02,910 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:19:03,477 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:19:03,755 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:22:00,283 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:22:01,690 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:22:09,348 - __main__ - INFO - Index page loaded
+2025-03-09 01:22:12,997 - __main__ - INFO - User symptoms: ['itching', 'skin_rash', 'cough']
+2025-03-09 01:22:12,998 - __main__ - INFO - Input vector: [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-09 01:22:12,999 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 01:22:14,469 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:22:14,469 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:22:14,704 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:22:14,704 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:22:42,770 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:22:54,342 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:22:55,605 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:23:07,298 - __main__ - INFO - Index page loaded
+2025-03-09 01:23:10,928 - __main__ - INFO - User symptoms: ['itching', 'skin_rash', 'cough']
+2025-03-09 01:23:10,929 - __main__ - INFO - Input vector: [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-09 01:23:10,930 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 01:23:12,506 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:23:12,507 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:25:31,413 - __main__ - INFO - Appointment page loaded
+2025-03-09 01:27:44,728 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:27:46,074 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:27:56,549 - __main__ - INFO - Index page loaded
+2025-03-09 01:28:00,377 - __main__ - INFO - User symptoms: ['itching', 'skin_rash', 'cough']
+2025-03-09 01:28:00,378 - __main__ - INFO - Input vector: [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-09 01:28:00,378 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 01:28:01,712 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:28:01,713 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:28:02,239 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:28:02,239 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:28:02,786 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:28:02,787 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:28:03,513 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:28:03,514 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:28:04,275 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:28:04,276 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:28:04,682 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:28:04,682 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:28:04,965 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:28:04,966 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:28:05,213 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:28:05,215 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:28:05,442 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:28:05,442 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:28:06,801 - __main__ - INFO - Appointment page loaded
+2025-03-09 01:28:21,817 - __main__ - INFO - Appointment PDF generated successfully
+2025-03-09 01:29:23,972 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:29:25,314 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:29:36,023 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:29:43,493 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:29:44,862 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:29:53,641 - __main__ - INFO - Index page loaded
+2025-03-09 01:29:57,267 - __main__ - INFO - User symptoms: ['itching', 'skin_rash', 'cough']
+2025-03-09 01:29:57,268 - __main__ - INFO - Input vector: [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-09 01:29:57,268 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 01:29:58,538 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:29:58,538 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:29:58,919 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:29:58,919 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:29:59,183 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:29:59,184 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:29:59,420 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:29:59,421 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:30:01,304 - __main__ - INFO - Appointment page loaded
+2025-03-09 01:30:16,847 - __main__ - INFO - Appointment PDF generated successfully
+2025-03-09 01:34:27,722 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:34:29,098 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:34:39,813 - __main__ - INFO - Index page loaded
+2025-03-09 01:34:43,612 - __main__ - INFO - User symptoms: ['itching', 'skin_rash', 'cough']
+2025-03-09 01:34:43,613 - __main__ - INFO - Input vector: [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-09 01:34:43,614 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 01:38:11,234 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 01:38:11,234 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:38:12,608 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 01:38:12,609 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:38:40,112 - __main__ - INFO - Index page loaded
+2025-03-09 01:38:44,051 - __main__ - INFO - User symptoms: ['itching', 'skin_rash', 'cough']
+2025-03-09 01:38:44,053 - __main__ - INFO - Input vector: [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-09 01:38:44,054 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 01:38:47,690 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:38:47,690 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:44:17,195 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 01:44:17,195 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:44:18,573 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 01:44:18,574 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:44:22,093 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 01:44:22,093 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:44:23,487 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 01:44:23,487 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:44:31,316 - __main__ - INFO - Index page loaded
+2025-03-09 01:44:33,793 - __main__ - INFO - Appointment page loaded
+2025-03-09 01:44:50,275 - __main__ - INFO - Appointment PDF generated successfully
+2025-03-09 01:44:57,483 - __main__ - INFO - Appointment page loaded
+2025-03-09 01:45:01,205 - __main__ - INFO - User symptoms: ['itching', 'skin_rash', 'cough']
+2025-03-09 01:45:01,206 - __main__ - INFO - Input vector: [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-09 01:45:01,207 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 01:45:02,173 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:45:02,174 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:45:02,625 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:45:02,625 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:45:03,143 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:45:03,144 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:45:03,666 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:45:03,667 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:45:04,240 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:45:04,241 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:45:04,791 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:45:04,791 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:45:05,447 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:45:05,447 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:46:22,028 - __main__ - INFO - About page loaded
+2025-03-09 01:46:25,911 - __main__ - INFO - About page loaded
+2025-03-09 01:46:28,282 - __main__ - INFO - Contact page loaded
+2025-03-09 01:46:31,959 - __main__ - INFO - Developer page loaded
+2025-03-09 01:46:35,644 - __main__ - INFO - Blog page loaded
+2025-03-09 01:46:38,977 - __main__ - INFO - Home page loaded
+2025-03-09 01:46:42,293 - __main__ - INFO - User symptoms: ['itching', 'skin_rash', 'cough']
+2025-03-09 01:46:42,295 - __main__ - INFO - Input vector: [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-09 01:46:42,295 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 01:46:44,062 - __main__ - INFO - Appointment page loaded
+2025-03-09 01:46:46,694 - __main__ - INFO - Appointment page loaded
+2025-03-09 01:46:52,158 - __main__ - INFO - Index page loaded
+2025-03-09 01:49:54,321 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 01:49:54,322 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:49:58,286 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 01:49:58,286 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:49:59,582 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 01:49:59,582 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:50:09,774 - __main__ - INFO - Index page loaded
+2025-03-09 01:50:14,503 - __main__ - INFO - User symptoms: ['itching', 'skin_rash', 'cough']
+2025-03-09 01:50:14,504 - __main__ - INFO - Input vector: [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-09 01:50:14,505 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 01:50:15,887 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:50:15,888 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:50:16,373 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:50:16,374 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:50:16,648 - __main__ - INFO - User symptoms: ['']
+2025-03-09 01:50:16,648 - __main__ - ERROR - Error predicting disease: ''
+2025-03-09 01:50:17,513 - __main__ - INFO - Appointment page loaded
+2025-03-09 01:50:29,377 - __main__ - INFO - Appointment PDF generated successfully
+2025-03-09 01:50:34,285 - __main__ - INFO - Appointment page loaded
+2025-03-09 01:50:36,808 - __main__ - INFO - Index page loaded
+2025-03-09 01:59:57,175 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 01:59:57,175 - __main__ - INFO - Model loaded successfully!
+2025-03-09 01:59:58,548 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 01:59:58,549 - __main__ - INFO - Model loaded successfully!
+2025-03-09 02:00:23,335 - __main__ - INFO - Index page loaded
+2025-03-09 02:00:27,198 - __main__ - INFO - User symptoms: ['itching', 'skin_rash', 'cough']
+2025-03-09 02:00:27,200 - __main__ - INFO - Input vector: [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-09 02:00:27,201 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 02:00:28,072 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:28,512 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:28,818 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:29,094 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:29,376 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:29,628 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:29,873 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:30,140 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:30,389 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:30,650 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:30,902 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:31,166 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:31,423 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:31,684 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:32,065 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:32,440 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:32,789 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:33,292 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:33,620 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:33,881 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:00:34,158 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:10:20,244 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 02:10:20,245 - __main__ - INFO - Model loaded successfully!
+2025-03-09 02:10:22,043 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 02:10:22,044 - __main__ - INFO - Model loaded successfully!
+2025-03-09 02:13:24,492 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 02:13:24,492 - __main__ - INFO - Model loaded successfully!
+2025-03-09 02:13:26,143 - __main__ - INFO - Datasets loaded successfully!
+2025-03-09 02:13:26,144 - __main__ - INFO - Model loaded successfully!
+2025-03-09 02:13:34,603 - __main__ - INFO - Index page loaded
+2025-03-09 02:13:39,175 - __main__ - INFO - User symptoms: ['itching', 'skin_rash', 'cough']
+2025-03-09 02:13:39,178 - __main__ - INFO - Input vector: [1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+2025-03-09 02:13:39,180 - __main__ - ERROR - Error predicting disease: This SVC instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-09 02:13:40,375 - __main__ - WARNING - No symptoms provided
+2025-03-09 02:13:40,733 - __main__ - WARNING - No symptoms provided

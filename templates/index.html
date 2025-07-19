@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Red Health | AI-Powered Healthcare Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2a7fba;
+            --primary-dark: #1a5f8b;
+            --primary-light: #e1f0f9;
+            --secondary: #00b4d8;
+            --accent: #ff6b6b;
+            --success: #28a745;
+            --warning: #fd7e14;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary) !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark) !important;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary) !important;
+            background-color: var(--primary-light);
+        }
+
+        .nav-link.active {
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .health-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .health-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Main Content */
+        .main-container {
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Symptom Form */
+        .symptom-form {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 0.75rem 1.25rem;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(42, 127, 186, 0.25);
+        }
+
+        .btn {
+            font-weight: 600;
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(42, 127, 186, 0.3);
+        }
+
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* Voice Input */
+        .voice-input-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .voice-input-btn.listening {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 180, 216, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0); }
+        }
+
+        /* Results Section */
+        .results-section {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .result-card {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Alerts */
+        .alert-notice {
+            background-color: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-links h5 {
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .footer-links h5::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .symptom-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='H.jpg') }}" alt="Code-Red Health Logo">
+                Code-Red Health
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/developer">developer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/medi_consult">Medi Consult</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/appointment">Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-primary" href="/admin">Admin Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="health-hero">
+        <div class="container text-center text-white">
+            <h1 class="hero-title">Advanced Symptom Analysis</h1>
+            <p class="hero-subtitle">Our AI-powered system helps identify potential health conditions based on your symptoms, providing preliminary guidance before professional consultation.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#symptom-checker" class="btn btn-light btn-lg">Check Symptoms</a>
+                <a href="/appointment" class="btn btn-outline-light btn-lg">Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container main-container">
+        <!-- Symptom Checker Form -->
+        <div id="symptom-checker" class="symptom-form">
+            <h2 class="text-center mb-4">Symptom Checker</h2>
+            <form action="/predict" method="post">
+                <div class="mb-4">
+                    <label for="symptoms" class="form-label">Describe Your Symptoms</label>
+                    <input type="text" class="form-control" id="symptoms" name="symptoms" 
+                           placeholder="e.g., fever, headache, fatigue, nausea">
+                    <small class="text-muted">Be as specific as possible for better results</small>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
+                    <button type="button" id="startSpeechRecognition" class="btn btn-outline-primary voice-input-btn mb-3 mb-md-0">
+                        <i class="fas fa-microphone me-2"></i> Voice Input
+                    </button>
+                    <div id="transcription" class="form-control bg-light"></div>
+                </div>
+
+                {% if message %}
+                    <div class="alert alert-danger mb-4">{{ message }}</div>
+                {% endif %}
+
+                <button type="submit" class="btn btn-primary w-100 py-3">
+                    <i class="fas fa-search me-2"></i> Analyze Symptoms
+                </button>
+            </form>
+        </div>
+
+        <!-- Notices -->
+        <div class="alert alert-notice mb-4">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-info-circle me-3 fs-4 text-primary"></i>
+                <div>
+                    <h5 class="mb-1">For best results</h5>
+                    <p class="mb-0">Visit our <a href="/medi_consult" class="text-primary">Medi Consult</a> page for predefined symptoms and doctor availability schedules.</p>
+                </div>
+            </div>
+        </div>
+
+        {% if manager_message %}
+        <div class="alert alert-warning">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-exclamation-triangle me-3 fs-4"></i>
+                <div>{{ manager_message }}</div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    {% if predicted_disease %}
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="text-center section-title">Diagnosis Results</h2>
+            <p class="text-center text-muted mb-5">Based on your reported symptoms, here's what our system has identified</p>
+
+            <div class="row g-4">
+                <!-- Disease Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="result-card" data-bs-toggle="modal" data-bs-target="#diseaseModal">
+                        <div class="result-icon">
+                            <i class="fas fa-diagnoses"></i>
+                        </div>
+                        <h4>Potential Condition</h4>
+                        <p class="text-muted">Our system's primary diagnosis based on your symptoms</p>
+                        <div class="text-primary fw-bold mt-auto">{{ predicted_disease }}</div>
+                    </div>
+                </div>
+
+                <!-- Description Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="result-card" data-bs-toggle="modal" data-bs-target="#descriptionModal">
+                        <div class="result-icon">
+                            <i class="fas fa-file-medical"></i>
+                        </div>
+                        <h4>Condition Overview</h4>
+                        <p class="text-muted">Learn more about this health condition</p>
+                        <div class="text-primary fw-bold mt-auto">View Details</div>
+                    </div>
+                </div>
+
+                <!-- Precautions Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="result-card" data-bs-toggle="modal" data-bs-target="#precautionModal">
+                        <div class="result-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Recommended Precautions</h4>
+                        <p class="text-muted">Steps to manage your symptoms and prevent worsening</p>
+                        <div class="text-primary fw-bold mt-auto">View Recommendations</div>
+                    </div>
+                </div>
+
+                <!-- Medications Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="result-card" data-bs-toggle="modal" data-bs-target="#medicationsModal">
+                        <div class="result-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h4>Possible Medications</h4>
+                        <p class="text-muted">Common treatments (consult your doctor first)</p>
+                        <div class="text-primary fw-bold mt-auto">View Options</div>
+                    </div>
+                </div>
+
+                <!-- Lifestyle Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="result-card" data-bs-toggle="modal" data-bs-target="#workoutsModal">
+                        <div class="result-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h4>Activity Suggestions</h4>
+                        <p class="text-muted">Recommended exercises and activities</p>
+                        <div class="text-primary fw-bold mt-auto">View Suggestions</div>
+                    </div>
+                </div>
+
+                <!-- Diet Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="result-card" data-bs-toggle="modal" data-bs-target="#dietsModal">
+                        <div class="result-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4>Dietary Recommendations</h4>
+                        <p class="text-muted">Nutritional advice to support recovery</p>
+                        <div class="text-primary fw-bold mt-auto">View Recommendations</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="/appointment" class="btn btn-primary btn-lg px-5">
+                    <i class="fas fa-calendar-check me-2"></i> Book Doctor Appointment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Disease Modal -->
+    <div class="modal fade" id="diseaseModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fas fa-diagnoses me-2"></i> Potential Condition</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-center text-primary mb-4">{{ predicted_disease }}</h4>
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i> This is a preliminary assessment. Please consult with a healthcare professional for accurate diagnosis and treatment.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="/appointment" class="btn btn-primary">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Description Modal -->
+    <div class="modal fade" id="descriptionModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fas fa-file-medical me-2"></i> Condition Overview</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-primary mb-4">{{ predicted_disease }}</h4>
+                    <div class="mb-4">
+                        <h5>Description</h5>
+                        <p>{{ dis_des }}</p>
+                    </div>
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle me-2"></i> The information provided is for educational purposes only and should not replace professional medical advice.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Precaution Modal -->
+    <div class="modal fade" id="precautionModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fas fa-shield-alt me-2"></i> Recommended Precautions</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-primary mb-4">{{ predicted_disease }}</h4>
+                    <ul class="list-group list-group-flush">
+                        {% for i in my_precautions %}
+                            <li class="list-group-item d-flex align-items-start">
+                                <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                                <span>{{ i }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medications Modal -->
+    <div class="modal fade" id="medicationsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fas fa-pills me-2"></i> Possible Medications</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-triangle me-2"></i> <strong>Important:</strong> Always consult with a qualified healthcare provider before taking any medication.
+                    </div>
+                    <h4 class="text-primary mb-4">{{ predicted_disease }}</h4>
+                    <ul class="list-group list-group-flush">
+                        {% for i in medications %}
+                            <li class="list-group-item d-flex align-items-start">
+                                <i class="fas fa-capsules text-primary me-2 mt-1"></i>
+                                <span>{{ i }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Workouts Modal -->
+    <div class="modal fade" id="workoutsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fas fa-running me-2"></i> Activity Suggestions</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-primary mb-4">{{ predicted_disease }}</h4>
+                    <ul class="list-group list-group-flush">
+                        {% for i in workout %}
+                            <li class="list-group-item d-flex align-items-start">
+                                <i class="fas fa-heartbeat text-primary me-2 mt-1"></i>
+                                <span>{{ i }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diets Modal -->
+    <div class="modal fade" id="dietsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fas fa-utensils me-2"></i> Dietary Recommendations</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-primary mb-4">{{ predicted_disease }}</h4>
+                    <ul class="list-group list-group-flush">
+                        {% for i in my_diet %}
+                            <li class="list-group-item d-flex align-items-start">
+                                <i class="fas fa-apple-alt text-primary me-2 mt-1"></i>
+                                <span>{{ i }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h3 class="text-white mb-4">
+                        <img src="{{ url_for('static', filename='H.jpg') }}" alt="Code-Red Health Logo" height="40" class="me-2">
+                        Code-Red Health
+                    </h3>
+                    <p class="text-muted">Providing innovative healthcare solutions through advanced technology and medical expertise.</p>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5 class="text-white">Quick Links</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/developer">Developer</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5 class="text-white">Services</h5>
+                        <ul>
+                            <li><a href="/medi_consult">Medi Consult</a></li>
+                            <li><a href="/appointment">Appointments</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="footer-links">
+                        <h5 class="text-white">Contact Us</h5>
+                        <ul class="text-muted">
+                            <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Narula Institute of Technology</li>
+                            <li class="mb-2"><i class="fas fa-phone me-2"></i> +91 8768569757</li>
+                            <li class="mb-2"><i class="fas fa-envelope me-2"></i> healthcare.code.red.2025@gmail.com</li>
+                            <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center text-muted">
+                <p class="mb-0">&copy; 2025 Code-Red Health. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Enhanced Voice Recognition
+        const startSpeechRecognitionButton = document.getElementById('startSpeechRecognition');
+        const transcriptionDiv = document.getElementById('transcription');
+        const symptomsInput = document.getElementById('symptoms');
+
+        startSpeechRecognitionButton.addEventListener('click', startSpeechRecognition);
+
+        function startSpeechRecognition() {
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = 'en-US';
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            // Visual feedback
+            startSpeechRecognitionButton.classList.add('listening');
+            startSpeechRecognitionButton.innerHTML = '<i class="fas fa-microphone-slash me-2"></i> Listening...';
+            transcriptionDiv.textContent = "Listening... Please speak clearly about your symptoms.";
+
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript;
+                transcriptionDiv.textContent = transcript;
+                symptomsInput.value = transcript;
+                
+                // Visual feedback
+                startSpeechRecognitionButton.classList.remove('listening');
+                startSpeechRecognitionButton.innerHTML = '<i class="fas fa-microphone me-2"></i> Voice Input';
+            };
+
+            recognition.onerror = function(event) {
+                console.error('Speech recognition error', event.error);
+                transcriptionDiv.textContent = "Error: " + event.error;
+                
+                // Visual feedback
+                startSpeechRecognitionButton.classList.remove('listening');
+                startSpeechRecognitionButton.innerHTML = '<i class="fas fa-microphone me-2"></i> Voice Input';
+            };
+
+            recognition.onend = function() {
+                if (!startSpeechRecognitionButton.classList.contains('listening')) return;
+                
+                // Visual feedback if stopped unexpectedly
+                startSpeechRecognitionButton.classList.remove('listening');
+                startSpeechRecognitionButton.innerHTML = '<i class="fas fa-microphone me-2"></i> Voice Input';
+            };
+
+            recognition.start();
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
